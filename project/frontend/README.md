@@ -1,13 +1,3 @@
-# 🛡️ Aegis Security Suite
-
-**Next-Generation Data Security & Privacy Platform**
-
-A comprehensive full-stack application addressing critical cybersecurity challenges including threat detection, data encryption, privacy protection, security awareness training, and IoT device security.
-
-![Aegis Security Suite](https://img.shields.io/badge/Security-Platform-blue) ![React](https://img.shields.io/badge/React-18.3.0-61dafb) ![Flask](https://img.shields.io/badge/Flask-3.0.0-black) ![License](https://img.shields.io/badge/License-MIT-green)
-
----
-
 ## 🎯 Problem Statement
 
 This project addresses five critical security challenges:
@@ -17,6 +7,7 @@ This project addresses five critical security challenges:
 3. **Identity Theft** - Excessive personal data sharing increasing theft risks
 4. **Human Error** - The biggest vulnerability in cybersecurity breaches
 5. **IoT Security** - Lack of strong security protocols for smart devices
+6. **Phishing** - Targeted deceptive attacks used to steal credentials and data
 
 ---
 
@@ -56,6 +47,11 @@ This project addresses five critical security challenges:
 - Device isolation capabilities
 - Network security analysis
 - Firmware update tracking
+
+### 🎣 Phishing Analyzer
+- *AI-driven analysis for email content and malicious links*
+- Generates a suspicion score to evaluate content risk.
+- Dedicated link checker for known spam/shortener URLs.
 
 ---
 
@@ -168,7 +164,8 @@ aegis-security-suite/
 │   │   ├── VaultDashboard.js
 │   │   ├── PrivacyDashboard.js
 │   │   ├── PhalanxTraining.js
-│   │   └── SentryControl.js
+|   |   ├── PhishingAnalyzer.js
+│   │   └── SentryControl.js    
 │   ├── services/
 │   │   └── api.js             # API service layer
 │   ├── utils/
@@ -220,7 +217,7 @@ aegis-security-suite/
 
 ### Heimdall (Threat Detection)
 ```
-POST   /api/simulate/heimdall        - Simulate threat detection
+POST   /api/simulate/heimdall         - Simulate threat detection
 GET    /api/threats/history           - Get threat history
 GET    /api/threats/analytics         - Get threat analytics
 ```
@@ -254,6 +251,12 @@ POST   /api/sentry/scan               - Scan network
 GET    /api/sentry/status/:id         - Get device status
 ```
 
+### Phishing Analyzer
+```
+POST   /api/phishing/analyzer         - Analyze text/email content for phishing risk
+POST   /api/spam/check                - Check URL for no spam/shortener links
+```
+
 ### Security
 ```
 GET    /api/security/audit            - Security audit report
@@ -280,6 +283,7 @@ POST   /api/password/strength         - Check password strength
 3. **IoT Management** - Monitor smart home devices
 4. **Security Training** - Educate users on best practices
 5. **Compliance** - Meet regulatory requirements
+6. **Phishing Prevention** - Train employees and detect phishing threats in real-time
 
 ---
 
